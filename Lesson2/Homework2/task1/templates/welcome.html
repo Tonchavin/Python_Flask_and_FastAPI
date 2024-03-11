@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}
+{{ super() }} - {{ title }}
+{% endblock %}
+{% block content %}
+<form class="form_auth_style" action="/" method="POST">
+<!--    <h1>Welcome, {{ request.form.get('username') }}!</h1>-->
+    <h1>Welcome, {{ session["username"] }}!</h1>
+    <button class="form_auth_button" type="submit" name="form_auth_submit">Exit</button>
+</form>
+{% endblock %}
+
