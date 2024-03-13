@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ super() }} - {{ title }}
+{% endblock %}
+
+{% block context %}
+<div class="row">
+    {% for user in users %}
+    <p class="col-12 col-md-6">
+        Имя пользователя: {{ db.user.firstname }}<br>
+        Фамилия пользователя: {{ user.lastname }}<br>
+        Email пользователя: {{ user.email }}<br>
+    </p>
+    {% endfor %}
+</div>
+{% endblock %}
